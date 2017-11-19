@@ -1,0 +1,49 @@
+/** --------------------------------------------------------------
+ *  Custom breadcrumbs
+ */
+
+.breadcrumb-list {
+    & ul {
+        padding: .2em .5em;
+        width: 100%;
+        background: @secondary-color;
+        border-bottom: 2px solid #ccc;
+
+        & li {
+            position: relative;
+            display: inline-block;
+            background: darken(@secondary-color, 25%);
+            color: #666;
+            padding: 7px;
+            margin-right: 17px;
+
+            & a {
+                text-decoration: none;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 0;
+                height: 0;
+                top: 0;
+                right: -16px;
+                border-top: 16px solid transparent;
+                border-bottom: 16px solid transparent;
+                border-left: 16px solid darken(@secondary-color, 25%);
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                background: darken(@secondary-color, 35%);
+
+                &::after {
+                    border-left-color: darken(@secondary-color, 35%);
+                }
+            }
+        }
+    }
+}
