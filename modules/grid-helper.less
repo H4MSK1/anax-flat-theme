@@ -1,0 +1,16 @@
+/** --------------------------------------------------------------
+ *  Grid helpers
+ */
+
+.showGrid(@maxWidth: 1100px, @gridImage) {
+    background: url("@{gridImage}") repeat-y fixed center center;
+    background-size: 100% auto;
+
+    @media (min-width: @maxWidth) {
+        background-size: @maxWidth auto;
+    }
+}
+
+.showHgrid(@gridImage: "../img/grid/horisontal-grid-24.png") {
+    background: url("@{gridImage}");
+}

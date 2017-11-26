@@ -11,7 +11,7 @@
 @import url(normalize.less);
 
 // Basic region structure
-@import url(regions.less);
+//@import url(regions.less);
 
 // Responsive menu
 @import url(responsive-menu.less);
@@ -22,88 +22,16 @@
 // Custom navbar
 @import url(navbar.less);
 
+
+//@import url(grid-flex.less);
+//@import url(grid-float.less);
+@import url(grid.less);
+@import url(grid-helper.less);
+@import url(typo/typography.less);
+@import url(layout.less);
+
 // Custom breadcrumbs
 @import url(breadcrumbs.less);
-
-@secondary-color: #f2f2f2;
-
-html {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Helvetica, sans-serif;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-a {
-    color: #000;
-    text-decoration: underline;
-
-    &:hover {
-        color: royalblue;
-    }
-
-    &:active {
-        color: inherit;
-    }
-}
-
-article,
-.footer {
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-.footer {
-    background-color: #fff;
-    padding-bottom: 10px;
-}
-
-.wrap-all {
-    background: @secondary-color;
-    width: 100%;
-    box-shadow: #9c968d 0 2px 6px;
-}
-
-.me-image {
-    float: left;
-    height: 350px;
-    margin-right: 10px;
-}
-
-.block {
-    &.toc {
-        padding: 0 5px;
-    }
-
-    & ul.toc {
-        margin: 0;
-        padding: 0 5px 0 0;
-        list-style: none;
-
-        & li {
-            width: 100%;
-            margin-bottom: 7px;
-            padding: 3px;
-            border-bottom: 2px solid #ccc;
-
-            &:hover,
-            &.selected {
-                border-bottom-color: #666;
-            }
-
-            & a {
-                text-decoration: none;
-            }
-        }
-    }
-}
 
 // Media queries
 @import url(responsive.less);
