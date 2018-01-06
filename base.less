@@ -1,0 +1,39 @@
+@import url(style.less);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+@wrapAllShadow: none;
+@wrapAllBackgroundColor: #fff;
+
+@rmNavbarGradientFrom: #fff;
+@rmNavbarGradientTo: #fff;
+
+@rmNavbarGradientSelectedFrom: #fff;
+@rmNavbarGradientSelectedTo: #fff;
+
+@rmNavbarBorder: 0 solid #666;
+@rmNavbarBorderRadius: 0px;
+
+@rmNavbarSelectedColor: #000;
+@rmNavbarSelectedBackgroundColorHover: #fff;
+
+@siteHeaderBackgroundColor: #fff;
+
+.site-header {
+    background-color: @siteHeaderBackgroundColor;
+}
+
+.rm-desktop li {
+    font-weight: normal;
+
+    &:hover {
+        background: #fff;
+    }
+}
+
+.rm-desktop li.selected a {
+    color: @rmNavbarSelectedColor;
+
+    &:hover {
+        color: @rmNavbarSelectedColor;
+    }
+}

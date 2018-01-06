@@ -1,0 +1,48 @@
+@import url(color.less);
+
+@wrapAllShadow: #9c968d 0 2px 6px;
+@wrapAllBackgroundColor: darkblue;
+
+@rmNavbarGradientFrom: #777;
+@rmNavbarGradientTo: #555;
+
+@rmNavbarGradientSelectedFrom: darken(#ccc, 60%);
+@rmNavbarGradientSelectedTo: darken(#ccc, 90%);
+
+@rmNavbarBorder: 1px solid #999;
+@rmNavbarBorderRadius: 0px;
+
+@rmNavbarSelectedColor: #fff;
+@rmNavbarSelectedBackgroundColorHover: #333;
+
+@siteHeaderBackgroundColor: darken(#a2b7ff, 50%);
+
+@rmNavbarLinkColor: #fff;
+
+@footerBackgroundColor: @siteHeaderBackgroundColor;
+
+html {
+    background-color: darken(@siteHeaderBackgroundColor, 50%); 
+}
+
+body {
+    color: #fff;
+}
+
+a {
+    color: #ccc;
+}
+
+.rm-desktop li {
+    &:hover a {
+        color: #000;
+    }
+}
+
+.rm-desktop li.selected a {
+    color: @rmNavbarSelectedColor;
+
+    &:hover {
+        color: @rmNavbarSelectedColor;
+    }
+}

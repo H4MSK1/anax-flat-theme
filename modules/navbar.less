@@ -2,6 +2,20 @@
  *  Custom navbar
  */
 
+@rmNavbarGradientFrom: #fff;
+@rmNavbarGradientTo: #999;
+
+@rmNavbarGradientSelectedFrom: #444;
+@rmNavbarGradientSelectedTo: #222;
+
+@rmNavbarBorder: 1px solid #666;
+@rmNavbarBorderRadius: 30px;
+
+@rmNavbarSelectedColor: #fff;
+@rmNavbarSelectedBackgroundColorHover: #000;
+
+@rmNavbarLinkColor: #000;
+
 .css-gradient(@from: #fff, @to: #999) {
     background-color: @to;
     background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
@@ -29,17 +43,18 @@
 .rm-desktop li {
     display: inline-block;
     padding: 0;
-    border: 1px solid #666;
     font-weight: 700;
-    border-radius: 30px;
-    .css-gradient();
+    border: @rmNavbarBorder;
+    border-radius: @rmNavbarBorderRadius;
+    .css-gradient(@rmNavbarGradientFrom, @rmNavbarGradientTo);
 
     &:hover {
-        .css-gradient(darken, 15%);
+        .css-gradient(darken, 15%, @rmNavbarGradientFrom, @rmNavbarGradientTo);
     }
 
     & a,
     & a:hover {
+        color: @rmNavbarLinkColor;
         text-decoration: none;
         background: none;
     }
@@ -47,10 +62,10 @@
 
 .rm-desktop .selected {
     border-color: #000;
-    color: #fff;
-    .css-gradient(#444, #222);
+    color: @rmNavbarSelectedColor;
+    .css-gradient(@rmNavbarGradientSelectedFrom, @rmNavbarGradientSelectedTo);
 
     &:hover {
-        background: #000;
+        background: @rmNavbarSelectedBackgroundColorHover;
     }
 }
